@@ -4,17 +4,21 @@ import { NgModule } from '@angular/core';
 import { AboutComponent } from './components/about/about.component';
 import { HeroesComponent } from './components/heroes/heroes.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
+import { DataBuscarComponent } from './components/dataBuscar/dataBuscar.component';
+import { CommonModule } from "@angular/common";
+import { BrowserModule } from '@angular/platform-browser';
 
 const routes: Routes = [
     {path: 'home', component: HomeComponent},
     {path: 'about', component: AboutComponent},
     {path: 'heroes', component: HeroesComponent},
     {path: 'heroe/:id', component: HeroeComponent},
+    {path: 'buscar/:termino', component: DataBuscarComponent},
     {path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
+    imports: [RouterModule.forRoot(routes),CommonModule],
     exports: [RouterModule],
     declarations: []
 })

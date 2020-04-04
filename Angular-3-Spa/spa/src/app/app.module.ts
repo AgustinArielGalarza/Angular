@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from "@angular/common";
 import { NgModule } from '@angular/core';
 //Rutas
 import { RouteModule } from './app.routes'
@@ -16,6 +17,7 @@ import { FormsModule } from '@angular/forms';
 import {APP_BASE_HREF} from '@angular/common';
 import { HeroeComponent } from './components/heroe/heroe.component'; 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +29,7 @@ import { HeroeComponent } from './components/heroe/heroe.component';
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     FormsModule,
     RouteModule
   ],
